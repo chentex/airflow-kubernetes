@@ -29,7 +29,7 @@ dagConfig:
 
 platforms:
   cloud:
-    versions: ["4.15", "4.16", "4.17"]
+    versions: ["4.16"]
     providers: ["aws"]
     #providers: ["aws", "aws-arm", "azure","gcp"]
     variants:
@@ -38,6 +38,16 @@ platforms:
       config: 
         install: ovn-small.json
         benchmarks: small-control-plane.json
+    - name: ovn-small-cp-no-scale
+      schedule: "0 12 * * 3"
+      config: 
+        install: ovn-small.json
+        benchmarks: small-control-plane-no-scale.json
+    - name: ovn-small-cp-scale
+      schedule: "0 12 * * 3"
+      config: 
+        install: ovn-small.json
+        benchmarks: small-control-plane-scale.json
     - name: ovn-medium-cp
       schedule: "0 12 * * 1"
       config: 
