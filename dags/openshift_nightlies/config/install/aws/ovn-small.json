@@ -10,7 +10,7 @@
     "openshift_master_root_volume_size": 100,
     "openshift_master_root_volume_type": "gp3",
     "openshift_master_root_volume_iops": 3000,
-    "openshift_worker_root_volume_size": 50,
+    "openshift_worker_root_volume_size": 75,
     "openshift_worker_root_volume_type": "gp3",
     "openshift_worker_root_volume_iops": 0,
     "machineset_metadata_label_prefix": "machine.openshift.io",
