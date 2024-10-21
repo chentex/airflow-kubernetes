@@ -76,7 +76,7 @@ platforms:
 
   # Do not program concurrent builds of ROSA/ROGCP/ARO
   rosa:
-    versions: ["4.15", "4.16"]
+    versions: ["4.17"]
     variants:
       - name: sts-ovn-small-cp
         schedule: "0 12 * * 3"
@@ -113,6 +113,10 @@ platforms:
         config:
           install: rosa/upgrade.json
           benchmarks: upgrade.json
+      - name: sts-ovn-tiny
+        config:
+          install: rosa/ovn-tiny.json
+          benchmarks: empty.json
 
   rosahcp:
     versions: ["4.15", "4.16"]
